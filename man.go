@@ -39,8 +39,6 @@ func main() {
 	flag.Usage = usage
 	flag.Parse()
 
-	//	flag.Usage()
-
 	if *download {
 		lg.Println("start download file")
 		downloadGfwlist()
