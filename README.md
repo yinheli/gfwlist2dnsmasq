@@ -4,7 +4,7 @@
 
 ### Download binnary
 
-Download binnary from // TODO
+Download binnary from [Release](https://github.com/yinheli/gfwlist2dnsmasq/releases)
 
 ## usage
 
