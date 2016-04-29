@@ -1,0 +1,13 @@
+.*
+
+.DS_Store
+
+
+!.keep
+!.gitignore
+
+/gfwlist.conf
+/gfwlist.txt
+
+# build result
+/gfwlist2dnsmasq
