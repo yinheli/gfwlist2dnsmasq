@@ -57,6 +57,10 @@ func main() {
 		if err := exec.Command("ipset", []string{"create", *ipsetName, "hash:net"}...).Run(); err != nil {
 			lg.Println("create ipset fail", err)
 		}
+
+		// always add google dns to gfwlist
+		exec.Command("ipset", []string{"add", *ipsetName, "8.8.8.8"}...).Run()
+		exec.Command("ipset", []string{"add", *ipsetName, "8.8.4.4"}...).Run()
 	}
 
 	if *restartDnsmasq {
