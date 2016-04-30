@@ -49,13 +49,14 @@ func main() {
 
 	if *clearOldIpsetList {
 		lg.Println("clear ipset", *ipsetName)
-		if err := exec.Command("ipset", []string{"-X", *ipsetName}...).Run(); err != nil {
-			lg.Println("clear ipset fail, error:", err)
-		}
+		e1 := exec.Command("ipset", []string{"destroy", *ipsetName}...).Run()
+		e2 := exec.Command("ipset", []string{"flush", *ipsetName}...).Run()
 
-		lg.Println("create ipset", *ipsetName)
-		if err := exec.Command("ipset", []string{"create", *ipsetName, "hash:net"}...).Run(); err != nil {
-			lg.Println("create ipset fail", err)
+		if e1 != nil && e2 != nil {
+			lg.Println("create ipset", *ipsetName)
+			if err := exec.Command("ipset", []string{"create", *ipsetName, "hash:net"}...).Run(); err != nil {
+				lg.Println("create ipset fail", err)
+			}
 		}
 
 		// always add google dns to gfwlist
