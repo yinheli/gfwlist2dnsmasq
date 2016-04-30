@@ -27,7 +27,7 @@ var (
 	dnsPort           = flag.Int("p", 5353, "upstream dns host port")
 
 	usage = func() {
-		fmt.Fprint(os.Stdout, "\nThe gfwlist to dnsmasq converter by yinheli @version 1.0.0 \n\n")
+		fmt.Fprint(os.Stdout, "\nThe gfwlist to dnsmasq converter by yinheli @version 1.0.1 \n\n")
 		fmt.Fprintf(os.Stdout, "Usage of %s\n", os.Args[0])
 		flag.PrintDefaults()
 	}
