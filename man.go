@@ -154,6 +154,10 @@ func parse() {
 			continue
 		}
 
+		if !strings.HasPrefix(domain, ".") {
+			domain = fmt.Sprintf(".%s", domain)
+		}
+
 		found := false
 		for _, v := range domainList {
 			if v == domain {
