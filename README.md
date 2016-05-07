@@ -10,7 +10,7 @@ Download binnary from [Release](https://github.com/yinheli/gfwlist2dnsmasq/relea
 
 ```bash
 
-The gfwlist to dnsmasq converter by yinheli @version 1.0.1 
+The gfwlist to dnsmasq converter by yinheli @version 1.0.2 
 
 Usage of ./gfwlist2dnsmasq
   -c	try clear old ipset list if exists. (default true)
