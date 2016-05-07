@@ -17,7 +17,7 @@ import (
 
 var (
 	gfwListUrl        = "https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
-	download          = flag.Bool("d", false, fmt.Sprintf("download latest gfwlist from: %s . if false will load gfwlist file from current dir.", gfwListUrl))
+	download          = flag.Bool("d", false, fmt.Sprintf("download latest gfwlist from: %s . if true will load gfwlist file from current dir.", gfwListUrl))
 	output            = flag.String("o", "/etc/dnsmasq.d/gfwlist.conf", "output the convent result to file location.")
 	withIpset         = flag.Bool("i", true, "convent with ipset, dnsmasq will add the dns result ip to ipset automaticly.")
 	ipsetName         = flag.String("n", "gfwlist", "the ipset list name which you want.")

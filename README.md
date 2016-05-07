@@ -14,7 +14,7 @@ The gfwlist to dnsmasq converter by yinheli @version 1.0.1
 
 Usage of ./gfwlist2dnsmasq
   -c	try clear old ipset list if exists. (default true)
-  -d	download latest gfwlist from: https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt . if false will load gfwlist file from current dir.
+  -d	download latest gfwlist from: https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt . if true will load gfwlist file from current dir.
   -h string
     	upstream dns host (default "127.0.0.1")
   -i	convent with ipset, dnsmasq will add the dns result ip to ipset automaticly. (default true)
